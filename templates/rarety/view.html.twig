@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ItemController!{% endblock %}
+
+{% block body %}
+<main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            {{rarety.name}}
+          </h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Propriété</th>
+            <th>Valeurs</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row">nom</td>
+            <td scope="row">{{rarety.name}}</td>
+        </tr>
+        <tr>
+            <td scope="row">Description</td>
+            <td scope="row">{{rarety.description}}</td>
+        </tr>
+    </tbody>
+</table>
+            
+        </div>
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">A propos</h4>
+            <p class="mb-0">On this page you can find all your Etherystal, you can see the specificities of each of them</p>
+          </div>
+
+          <div class="p-3">
+            <h4 class="font-italic">Rarety available</h4>
+            <ol class="list-unstyled mb-0">
+            {% for element in allRarety %}
+              <li class="same"><a href="{{path("rarety_view",{"name" : rarety.name})}}">{{rarety.name}}</a></li>
+            {% endfor %}
+            </ol>
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+{% endblock %}

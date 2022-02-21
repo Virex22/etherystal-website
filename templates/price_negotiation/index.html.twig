@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello InfoController!{% endblock %}
+
+{% block body %}
+
+<div class="container py-5 my-5">
+    
+    {{form_start(form)}}
+    {{ form_rest(form) }}
+    <button type="submit" class="input-group-text btn-success mx-auto px-5 py-2"><i class="bi bi-search me-2"></i> Search</button>
+    {{ form_end(form) }}
+    
+</div>
+{% endblock %}

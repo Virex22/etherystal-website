@@ -1,0 +1,13 @@
+{% extends 'admin-base.html.twig' %}
+
+{% block title %}Edit Rarety{% endblock %}
+
+{% block body %}
+    <h1>Edit Rarety</h1>
+
+    {{ include('rarety/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('rarety_index') }}">back to list</a>
+
+    {{ include('rarety/_delete_form.html.twig') }}
+{% endblock %}

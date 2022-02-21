@@ -1,0 +1,11 @@
+{% extends 'admin-base.html.twig' %}
+
+{% block title %}New Rarety{% endblock %}
+
+{% block body %}
+    <h1>Create new Rarety</h1>
+
+    {{ include('rarety/_form.html.twig') }}
+
+    <a href="{{ path('rarety_index') }}">back to list</a>
+{% endblock %}

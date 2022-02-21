@@ -1,0 +1,45 @@
+{% extends 'admin-base.html.twig' %}
+
+{% block title %}Etherystal index{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Etherystal index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Color</th>
+                <th>ItemID</th>
+                <th>MaterialInstanceName</th>
+                <th>Property</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for etherystal in etherystals %}
+            <tr>
+                <td>{{ etherystal.id }}</td>
+                <td>{{ etherystal.name }}</td>
+                <td>{{ etherystal.color }}</td>
+                <td>{{ etherystal.itemID }}</td>
+                <td>{{ etherystal.materialInstanceName }}</td>
+                <td>{{ etherystal.property }}</td>
+                <td>
+                    <a href="{{ path('etherystal_show', {'id': etherystal.id}) }}">show</a>
+                    <a href="{{ path('etherystal_edit', {'id': etherystal.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('etherystal_new') }}">Create new</a>
+    </div>
+{% endblock %}

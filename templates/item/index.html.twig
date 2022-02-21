@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Items{% endblock %}
+
+{% block body %}
+
+<main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            Item
+          </h3>
+
+              {{ form_start(form)}}
+              <div class="container">
+              <div class="input-group mb-3">
+                {{ form_widget(form.search)}}
+                <select class="form-select" name="choice">
+                  <option value="0" selected>Etherystal ID</option>
+                  <option value="1">Material ID</option>
+                  <option value="2">Color ID</option>
+                </select>
+                <button type="submit" class="input-group-text btn-success"><i class="bi bi-search me-2"></i> Search</button>
+                {{ form_errors(form.search)}}
+              </div>
+              </div>
+              {{ form_end(form)}}
+              {% if results %}
+              <div>
+                <div class="d-flex justify-content-around flex-wrap">
+                {% for result in results %}
+                  {{ include('item/_result_card.html.twig', {'result': result}) }}  
+                {% endfor %}
+                </div>
+              </div>
+              {% endif %}
+              
+              {% if searched and not results %}
+                <div class="alert alert-danger" role="alert">Sorry, No etherystal found.</div>
+              {% endif %}
+        </div>
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">A propos</h4>
+            <p class="mb-0">On this page you can find all your Etherystal, you can see the specificities of each of them</p>
+          </div>
+
+          <div class="p-3">
+            <h4 class="font-italic">Most viewed items</h4>
+            <ol class="list-unstyled mb-0">
+            {% for etherystal in mostResearchedEtherystal %}
+                 <li class="same"><a href="{{path('item_view' , {itemID : etherystal.itemID})}}">{{etherystal.name}}</a></li>
+            {% endfor %}
+            </ol>
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+{% endblock %}

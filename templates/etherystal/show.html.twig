@@ -1,0 +1,34 @@
+{% extends 'admin-base.html.twig' %}
+
+{% block title %}Etherystal{% endblock %}
+
+{% block body %}
+    <h1>Etherystal</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ etherystal.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ etherystal.name }}</td>
+            </tr>
+            <tr>
+                <th>MaterialInstanceName</th>
+                <td>{{ etherystal.materialInstanceName }}</td>
+            </tr>
+            <tr>
+                <th>Property</th>
+                <td>{{ etherystal.property }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('etherystal_index') }}">back to list</a>
+
+    <a href="{{ path('etherystal_edit', {'id': etherystal.id}) }}">edit</a>
+
+    {{ include('etherystal/_delete_form.html.twig') }}
+{% endblock %}

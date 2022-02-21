@@ -1,0 +1,11 @@
+{% extends 'admin-base.html.twig' %}
+
+{% block title %}New Etherystal{% endblock %}
+
+{% block body %}
+    <h1>Create new Etherystal</h1>
+
+    {{ include('etherystal/_form.html.twig') }}
+
+    <a href="{{ path('etherystal_index') }}">back to list</a>
+{% endblock %}

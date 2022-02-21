@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Etherystal number {{etherystal.itemID}}{% endblock %}
+
+{% block body %}
+<main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main  p-5">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            {{etherystal.name}}
+          </h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Propriété</th>
+            <th>Valeurs</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row">Item ID</td>
+            <td scope="row">{{etherystal.itemID}}</td>
+        </tr>
+        <tr>
+            <td scope="row">Material ID</td>
+            <td scope="row"><a href="{{path("material_view",{"materialID" : etherystal.material.materialID})}}">{{etherystal.material.name}}</a></td>
+        </tr>
+        <tr>
+            <td scope="row">Material instance name</td>
+            <td scope="row">{{etherystal.materialInstanceName}}</td>
+        </tr>
+        <tr>
+            <td scope="row">Color</td>
+            <td scope="row"><a href="{{path("color_view",{"colorID" : etherystal.color.colorID})}}">{{etherystal.color.name}}</a></td>
+        </tr>
+        <tr>
+            <td scope="row">Propriété technique du material instance</td>
+            <td scope="row">
+            <div class="propertie-wrapper">
+            {% for key, propertie in properties %}
+            <div class="propertie">
+              <div class="propertie-title">{{key}}</div>
+              <div class="propertie-content">{{ propertie }}</div>
+            </div>
+            {% endfor %}
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td scope="row">Rareté</td>
+            <td scope="row"><a href="{{path("rarety_view",{"name" : etherystal.rarety.name})}}">{{etherystal.rarety.name}}</a></td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">A propos</h4>
+            <p class="mb-0">On this page you can find all your Etherystal, you can see the specificities of each of them</p>
+          </div>
+
+          <div class="p-3">
+            <h4 class="font-italic">Same item</h4>
+            <h5 class="font-italic">Same color :</h5>
+            <ol class="list-unstyled mb-0">
+              {% if sameColor|length > 0 %}
+                  {% for sameElement in sameColor %}
+                      <li class="same"><a href="{{path('item_view' , {itemID : sameElement.itemID})}}">{{sameElement.name}}</a></li>
+                  {% endfor %}
+              {% else %}
+                  <div class="alert alert-danger" role="alert">Sorry, No etherystal found.</div>
+              {% endif %}
+            </ol>
+            <h5 class="font-italic">Same material :</h5>
+            <ol class="list-unstyled mb-0">
+              {% if sameMaterial|length > 0 %}
+                  {% for sameElement in sameMaterial %}
+                      <li class="same"><a href="{{path('item_view' , {itemID : sameElement.itemID})}}">{{sameElement.name}}</a></li>
+                  {% endfor %}
+              {% else %}
+                  <div class="alert alert-danger" role="alert">Sorry, No etherystal found.</div>
+              {% endif %}
+            </ol>
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+<div class="container">
+
+</div>
+{% endblock %}

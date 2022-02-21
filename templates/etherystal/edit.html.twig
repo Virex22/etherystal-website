@@ -1,0 +1,13 @@
+{% extends 'admin-base.html.twig' %}
+
+{% block title %}Edit Etherystal{% endblock %}
+
+{% block body %}
+    <h1>Edit Etherystal</h1>
+
+    {{ include('etherystal/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('etherystal_index') }}">back to list</a>
+
+    {{ include('etherystal/_delete_form.html.twig') }}
+{% endblock %}
