@@ -1,48 +1,58 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Information and Opportunity{% endblock %}
+{% block title %}Etherystal - Information and Opportunity{% endblock %}
 
 {% block body %}
 
-<div class="container info-wrapper">
-        <h1 class="pb-3 font-weight-bold">Information and Opportunity</h1>
-<div class="p-3">
-        <h2>What is the main ambition of Etherystal ?</h2>
-    <div class="info-block info-opportunity py-3">
-        <p>Initially the etherystals were created with a purely artistic objective, we wanted to diversify the NFT market with 3D model videos without procedural generation and all is done without the intervention of a machine in the choice of NFT components, from the creation to the publication and the choice of the different colors to look the most like our pallets, despite the variance that the material can bring, we will be able to correct it ourselves</p>
-        <p>The principle is to create a collection of 1,050 etherystal comprising 30 types of materials with 35 variations of colors for each material. </p>
-        <p>In order to add more content in our models we have associated identifiers for each material and color, moreover a property judging the rarity has been added, the detail of the rarity criteria are available in the detail of the etherystals on opensea, moreover you can have more information on our site on the different interpretations of the properties</p>
-       
-    </div> 
-        <h2>Is the principle of etherystal is only artistic?</h2>
-    <div class="info-block info-principle py-3">
-        <p>In the original idea, the etherystal had a purely artistic argument, but like a huge part of the NTFs on the market, it does not make it stand out</p>
-        <p>especially since the majority are looking for added value, so we have put in place a strategy to generate added value by cycle of sale and purchase which will be explained below</p>
-       
-    </div> 
-        <h2>What is the use of etherystal apart from its almost unique artistic side (small 3D videos) ?</h2>
-    <div class="info-block info-use py-3">
-        <p>in order to add a little interest, we want to get one of our holders a huge gift, either a sum of money or a material good</p>
-        <p>here, we can say to ourselves that it is not interesting because we would have a 1 in 1050 chance of winning the prize</p>
-        <p>the idea behind it is that we could allow more opportunity with selection cycles, much like a contest, a selection will be made to keep a range of 100 etherystals winning. which will make 1 chance out of 100 instead of a chance out of 1050, the nfts inside this range could therefore sell up to 10x more expensive because 10x more likely to have the jackpot, which means that you have a chance in 10 when you buy to sell it much more expensive, without counting the added artistic value or interest</p>
-        <p>The principle of etherystal not being based on the lot only, if the collection has a volume of exchange, there will necessarily be investors who will be able to buy back the etherystals at a higher price, even outside the selection range (at the basis it is an artistic collection)</p>
-     
-    </div> 
-        <h2>When will the etherystals ranges be selected ?</h2>
-    <div class="info-block info-ranges py-3">
-        <p>The different ranges will be selected from the moment a large part of the collection has been purchased, then a resale period will follow for 1 month, the principle would be to make a first range with 100 elements, then a range of 10 elements, and finally the winner will be chosen at random</p>
-        
-    </div> 
-        <h2>What to implement for the collection to be sold complement?</h2>
-<p>Indeed, if the stage of the reward must occur, it will be necessary to find many investors, on our side we will communicate enormously on the project, Moreover we think of starting even if all is not sold (perhaps 80% )</p>
-<p>on your side, the best would be to buy an etherystal if you know that two people could buy it and so on, in order to allow the objective of the object, it is the safest way to secure their investment and secure that of others</p>
-<img height="200" class="rounded mx-auto d-block" src="{{asset("images/propagation.jpg")}}" alt="propagation">
-<h2>What blockchain are etherystals on?</h2>
-<p>The etherystals are on the polygon blockchain, an overlay of ethereum, a lot of tutorials on the internet will show you how to bridge your ethereum and have WETH in order to buy the NFT in question, the choice of the polygon was made because we don't We didn't need an auction to sell our NFTs and we wanted to avoid charging fees for sellers and buyers, because etherystals are recorded as 10 second videos, which is incredibly expensive to hit them on the blockchain ethereum (around $400 for times when gas fees are lowest)</p>
-<h2>To conclude</h2>
-<p>The etherystal has many reasons to be acquired, at first each element of the collection are 3D videos of 10 seconds, which brings a lot of uniqueness, moreover the etherystals are not created by an algorithm but each object has been configured by their creators in order to adapt the colors to the material, and therefore offered a great quality of collection, that's why we believe in our project more than others</p>
-<p>The etherystal has also been able to adapt in order to have a utility and therefore still have a sales and purchase argument</p>
-<p>Finally, etherystal has a resale tax of 5% for the creator, which is low compared to other collections, which gives more comfort to buyers.</p>
-</div>
-</div>
+	<div class="container info-wrapper">
+		<h1 class="pb-3 font-weight-bold">Information and Opportunity</h1>
+		<div
+			class="p-3">
+			{# p1 #}
+			<h2>What is the main ambition of Etherystal ?</h2>
+			<div class="info-block info-opportunity py-3">
+				<p>Initially the etherystals were created with a purely artistic objective, we wanted to diversify the NFT market with 3D model videos without procedural generation and all is done without the intervention of a machine in the choice of NFT components, from the creation to the publication and the choice of the different colors to look the most like our pallets, despite the variance that the material can bring, we will be able to correct it ourselves</p>
+				<p>In order to add more content in our models we have associated identifiers for each material and color, moreover a property judging the rarity has been added, the detail of the rarity criteria are available in the detail of the etherystals on opensea, moreover you can have more information on our site on the different interpretations of the properties</p>
+				<p>The principle is to create a collection of 1,050 etherystal comprising 30 types of materials with 35 variations of colors for each material.
+				</p>
+			</div>
+			{# p2 #}
+			<h2>Is the principle of etherystal is only artistic?</h2>
+			<div class="info-block info-principle py-3">
+				<p>In the original idea, the etherystal had a purely artistic argument, but like a huge part of the NTFs on the market, it does not make it stand out especially since the majority are looking for added value, so we have put in place a strategy to generate added value by cycle of sale and purchase which will be explained below
+				</p>
+			</div>
+			{# p3 #}
+			<h2>What is the use of etherystal apart from its almost unique artistic side (small 3D videos) ?</h2>
+			<div class="info-block info-use py-3">
+				<p>In order to add a little interest, we want to get one of our holders a huge gift, either a sum of money or a material good, here we can say to ourselves that it is not interesting because we would have a 1 in 1050 chance of winning the prize</p>
+				<p>The idea behind it is that we could allow more opportunity with selection cycles, much like a contest, a selection will be made to keep a range of 100 etherystals winning. which will make 1 chance out of 100 instead of a chance out of 1050, the nfts inside this range could therefore sell up to 10x more expensive because 10x more likely to have the jackpot, which means that you have a chance in 10 when you buy to sell it much more expensive, without counting the added artistic value or interest</p>
+				<p>The principle of etherystal not being based on the lot only, if the collection has a volume of exchange, there will necessarily be investors who will be able to buy back the etherystals at a higher price, even outside the selection range (at the basis it is an artistic collection)</p>
+			</div>
+			{# p4 #}
+			<h2>When will the etherystals ranges be selected ?</h2>
+			<div class="info-block info-ranges py-3">
+				<p>The different ranges will be selected from the moment a large part of the collection has been purchased, then a resale period will follow for 1 month, the principle would be to make a first range with 100 elements, then a range of 10 elements, and finally the winner will be chosen at random</p>
+			</div>
+			{# p5 #}
+			<h2>What to implement for the collection to be sold complement?</h2>
+			<div class="info-block info-ranges py-3">
+				<p>Indeed, if the stage of the reward must occur, it will be necessary to find many investors, on our side we will communicate enormously on the project, Moreover we think of starting even if all is not sold (perhaps 80% )</p>
+				<p>on your side, the best would be to buy an etherystal if you know that two people could buy it and so on, in order to allow the objective of the object, it is the safest way to secure their investment and secure that of others</p>
+				<img height="200" class="rounded mx-auto d-block" src="{{asset("images/propagation.jpg")}}" alt="propagation">
+			</div>
+			{# p6 #}
+			<h2>What blockchain are etherystals on?</h2>
+			<div class="info-block info-ranges py-3">
+				<p>The etherystals are on the polygon blockchain, an overlay of ethereum, a lot of tutorials on the internet will show you how to bridge your ethereum and have WETH in order to buy the NFT in question, the choice of the polygon was made because we don't We didn't need an auction to sell our NFTs and we wanted to avoid charging fees for sellers and buyers, because etherystals are recorded as 10 second videos, which is incredibly expensive to hit them on the blockchain ethereum (around $400 for times when gas fees are lowest)</p>
+			</div>
+			{# conclusion #}
+			<h2>To conclude</h2>
+			<div class="info-block info-ranges py-3">
+				<p>The etherystal has many reasons to be acquired, at first each element of the collection are 3D videos of 10 seconds, which brings a lot of uniqueness, moreover the etherystals are not created by an algorithm but each object has been configured by their creators in order to adapt the colors to the material, and therefore offered a great quality of collection, that's why we believe in our project more than others</p>
+				<p>The etherystal has also been able to adapt in order to have a utility and therefore still have a sales and purchase argument</p>
+				<p>Finally, etherystal has a resale tax of 5% for the creator, which is low compared to other collections, which gives more comfort to buyers.</p>
+			</div>
+		</div>
+	</div>
 {% endblock %}
