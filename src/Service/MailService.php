@@ -19,7 +19,7 @@ class MailService{
         
         $email = (new Email())
         ->from($from)
-        ->to("vincentremy222@gmail")
+        ->to("vincentremy222@gmail.com")
         ->subject($subject)
         ->text($message);
         
